@@ -24,6 +24,7 @@ import type { InputProps, TextAreaProps } from '../input';
 import type { InputNumberProps } from '../input-number';
 import type { ListItemProps } from '../list';
 import type { Locale } from '../locale';
+import type { MasonryProps } from '../masonry';
 import type { MentionsProps } from '../mentions';
 import type { MenuProps } from '../menu';
 import type { ArgsProps as MessageProps } from '../message';
@@ -51,10 +52,10 @@ import type { TimelineProps } from '../timeline';
 import type { TooltipProps } from '../tooltip';
 import type { TourProps } from '../tour/interface';
 import type { TransferProps } from '../transfer';
+import type { TreeProps } from '../tree';
 import type { TreeSelectProps } from '../tree-select';
 import type { UploadProps } from '../upload';
 import type { RenderEmptyHandler } from './defaultRenderEmpty';
-import type { MasonryProps } from '../masonry';
 
 export const defaultPrefixCls = 'ant';
 export const defaultIconPrefixCls = 'anticon';
@@ -270,6 +271,8 @@ export type CascaderConfig = ComponentStyleConfig & Pick<CascaderProps, 'variant
 
 export type TreeSelectConfig = ComponentStyleConfig & Pick<TreeSelectProps, 'variant'>;
 
+export type TreeConfig = ComponentStyleConfig & Pick<TreeProps, 'classNames' | 'styles'>;
+
 export type DatePickerConfig = ComponentStyleConfig & Pick<DatePickerProps, 'variant'>;
 
 export type RangePickerConfig = ComponentStyleConfig & Pick<RangePickerProps, 'variant'>;
@@ -370,7 +373,7 @@ export interface ConfigComponentProps {
   popconfirm?: PopconfirmConfig;
   upload?: UploadConfig;
   notification?: NotificationConfig;
-  tree?: ComponentStyleConfig;
+  tree?: TreeConfig;
   colorPicker?: ComponentStyleConfig;
   datePicker?: DatePickerConfig;
   rangePicker?: RangePickerConfig;
